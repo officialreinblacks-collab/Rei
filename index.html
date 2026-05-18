@@ -11,7 +11,7 @@
             --red: #E50914;
             --red-glow: rgba(229, 9, 20, 0.4);
             --white: #ffffff;
-            --glass-bg: rgba(15, 15, 15, 0.65);
+            --glass-bg: rgba(15, 15, 15, 0.75);
             --glass-border: rgba(255, 255, 255, 0.08);
             --transition-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
         }
@@ -144,14 +144,14 @@
             justify-content: space-between;
             padding: 10px 20px;
             background: rgba(0, 0, 0, 0.55);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.06);
             transition: background 0.3s ease, padding 0.3s ease;
             gap: 12px;
         }
         #top-nav.scrolled {
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.82);
             padding: 6px 20px;
         }
         .nav-left { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
@@ -197,8 +197,7 @@
         #hamburger-overlay.active { opacity: 1; pointer-events: all; }
         #hamburger-panel {
             position: fixed; top: 0; left: 0; width: 280px; max-width: 80vw; height: 100vh;
-            background: rgba(8,8,8,0.95); backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px); border-right: 1px solid rgba(255,255,255,0.07);
+            background: rgba(12,12,12,0.95); border-right: 1px solid rgba(255,255,255,0.07);
             z-index: 9060; transform: translateX(-105%);
             transition: transform 0.35s cubic-bezier(0.22,0.05,0.18,1);
             display: flex; flex-direction: column; padding: 70px 20px 30px; gap: 4px;
@@ -221,19 +220,19 @@
         #hamburger-close:hover { color: var(--red); }
 
         /* ──────────────────────────── */
-        /* CATEGORY BAR */
+        /* CATEGORY BAR (no blur, solid bg) */
         /* ──────────────────────────── */
         #category-bar {
             position: fixed; top: 52px; left: 0; right: 0; z-index: 8990;
             display: flex; gap: 8px; padding: 8px 20px; overflow-x: auto;
-            background: rgba(0,0,0,0.55); backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.05);
+            background: rgba(10,10,10,0.88);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
             scrollbar-width: none; touch-action: pan-x;
         }
         #category-bar::-webkit-scrollbar { display: none; }
         .cat-btn {
             flex-shrink: 0; padding: 7px 18px; border-radius: 18px;
-            border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.06);
             color: #ddd; font-size: 0.78rem; font-weight: 600; cursor: pointer;
             letter-spacing: 0.03em; transition: all 0.25s; white-space: nowrap;
         }
@@ -339,8 +338,7 @@
         #contact-section { scroll-margin-top: 110px; padding: 40px 20px; }
         .contact-split {
             display: grid; grid-template-columns: 1fr 1fr; gap: 25px; max-width: 1000px;
-            margin: 0 auto; background: rgba(15,15,15,0.6); backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px); border-radius: 16px; padding: 30px;
+            margin: 0 auto; background: rgba(18,18,18,0.75); border-radius: 16px; padding: 30px;
             border: 1px solid rgba(255,255,255,0.07); box-shadow: 0 15px 40px rgba(0,0,0,0.4);
         }
         @media (max-width: 768px) {
@@ -378,7 +376,8 @@
         .submit-btn:hover { background: #ff1a25; }
         .submit-btn.sending { opacity: 0.7; pointer-events: none; }
         .submit-btn.success { background: #2ecc71; box-shadow: 0 0 20px rgba(46,204,113,0.4); pointer-events: none; }
-    /* ──────────────────────────── */
+
+                /* ──────────────────────────── */
         /* MODALS (optimized) */
         /* ──────────────────────────── */
         .modal-overlay {
@@ -396,8 +395,7 @@
         #gallery-modal .gallery-grid {
             display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
             gap: 12px; padding: 30px; max-width: 1100px; width: 100%; max-height: 85vh;
-            overflow-y: auto; background: rgba(15,15,15,0.75); backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px); border-radius: 14px;
+            overflow-y: auto; background: rgba(18,18,18,0.85); border-radius: 14px;
             border: 1px solid rgba(255,255,255,0.1);
         }
         #gallery-modal .gallery-grid img {
@@ -440,9 +438,8 @@
         .social-btn {
             display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px;
             border-radius: 24px; font-weight: 700; text-decoration: none; letter-spacing: 0.03em;
-            transition: all 0.3s; background: rgba(255,255,255,0.06);
+            transition: all 0.3s; background: rgba(255,255,255,0.08);
             border: 1px solid rgba(255,255,255,0.2); color: #fff;
-            backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
         }
         .social-btn:hover { background: rgba(229,9,20,0.25); border-color: var(--red); }
 
@@ -450,9 +447,8 @@
         .streaming-btn {
             display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px;
             border-radius: 24px; font-weight: 700; text-decoration: none; letter-spacing: 0.03em;
-            transition: all 0.3s; background: rgba(255,255,255,0.06);
+            transition: all 0.3s; background: rgba(255,255,255,0.08);
             border: 1px solid rgba(255,255,255,0.2); color: #fff;
-            backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
         }
         .streaming-btn:hover { background: rgba(229,9,20,0.25); border-color: var(--red); }
 
@@ -464,7 +460,7 @@
 </head>
 <body>
 
-        <div id="intro-overlay">
+    <div id="intro-overlay">
         <div id="intro-inner">
             <div id="intro-glow-ring"></div>
             <div id="intro-brand">Reinblacks Creativz</div>
@@ -484,7 +480,7 @@
                 <span class="nav-search-icon"><i class="fas fa-search"></i></span>
             </div>
             <div class="nav-right">
-                <a href="https://youtube.com/@reinblacks_music?si=6imR9nJCMDru0zrL" target="_blank" rel="noopener" class="yt-sub-btn" id="yt-sub-btn">
+                <a href="https://youtube.com/@reinblacks_music?si=6imR9nJCMDru0zrL" target="_blank" rel="noopener" class="yt-sub-btn">
                     <i class="fab fa-youtube"></i> Watch more on YouTube
                 </a>
             </div>
@@ -509,10 +505,9 @@
             <button class="cat-btn" data-scroll="contact-section">Apply Now</button>
         </div>
 
-        <!-- HERO SECTION with static WebP image -->
         <section id="hero">
             <div class="hero-video-wrap">
-                <img src="https://res.cloudinary.com/datfuxotx/image/upload/v1779091225/59e81920-528f-11f1-8980-f50923672664_oqesrd.webp" alt="Reinblacks Hero" class="hero-bg-image">
+                <img src="https://res.cloudinary.com/datfuxotx/image/upload/w_1500,c_limit,q_auto,f_auto/v1779091225/59e81920-528f-11f1-8980-f50923672664_oqesrd.webp" alt="Reinblacks Hero" class="hero-bg-image">
             </div>
             <div class="hero-gradient"></div>
             <div class="hero-content fade-up-section">
@@ -524,91 +519,85 @@
             </div>
         </section>
 
-        <!-- SECTION 1: AI Video Music Visualizers (3 videos only) -->
         <section class="content-section fade-up-section" id="section-visualizers">
             <div class="section-header"><span class="red-accent"></span> AI Video Music Visualizers</div>
             <div class="category-row" data-row="visualizers">
-                <!-- Only 3 videos as requested -->
                 <div class="poster-card wide" data-video="YpjmFiI_6Ms" data-title="Visualizer 1">
-                    <img src="https://img.youtube.com/vi/YpjmFiI_6Ms/maxresdefault.jpg" alt="Visualizer 1" loading="lazy">
+                    <img src="https://img.youtube.com/vi/YpjmFiI_6Ms/hqdefault.jpg" alt="Visualizer 1" loading="lazy">
                     <div class="play-icon-center"><i class="fas fa-play-circle"></i></div>
                     <div class="poster-overlay">Visualizer I</div>
                 </div>
                 <div class="poster-card wide" data-video="0lMemK0xYXs" data-title="Visualizer 2">
-                    <img src="https://img.youtube.com/vi/0lMemK0xYXs/maxresdefault.jpg" alt="Visualizer 2" loading="lazy">
+                    <img src="https://img.youtube.com/vi/0lMemK0xYXs/hqdefault.jpg" alt="Visualizer 2" loading="lazy">
                     <div class="play-icon-center"><i class="fas fa-play-circle"></i></div>
                     <div class="poster-overlay">Visualizer II</div>
                 </div>
                 <div class="poster-card wide" data-video="cJjmowtYDYU" data-title="Visualizer 3">
-                    <img src="https://img.youtube.com/vi/cJjmowtYDYU/maxresdefault.jpg" alt="Visualizer 3" loading="lazy">
+                    <img src="https://img.youtube.com/vi/cJjmowtYDYU/hqdefault.jpg" alt="Visualizer 3" loading="lazy">
                     <div class="play-icon-center"><i class="fas fa-play-circle"></i></div>
                     <div class="poster-overlay">Visualizer III</div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 2: AI Ads Videos (unchanged) -->
-        <section class="content-section fade-up-section" id="section-ads">
+             <section class="content-section fade-up-section" id="section-ads">
             <div class="section-header"><span class="red-accent"></span> AI Ads Videos</div>
             <div class="category-row" data-row="ads">
                 <div class="poster-card wide" data-video="zIUotjon9PI" data-title="AI Ad 1">
-                    <img src="https://img.youtube.com/vi/zIUotjon9PI/maxresdefault.jpg" alt="AI Ad 1" loading="lazy">
+                    <img src="https://img.youtube.com/vi/zIUotjon9PI/hqdefault.jpg" alt="AI Ad 1" loading="lazy">
                     <div class="play-icon-center"><i class="fas fa-play-circle"></i></div>
                     <div class="poster-overlay">AI Ad I</div>
                 </div>
                 <div class="poster-card wide" data-video="s6cpSzRMfw8" data-title="AI Ad 2">
-                    <img src="https://img.youtube.com/vi/s6cpSzRMfw8/maxresdefault.jpg" alt="AI Ad 2" loading="lazy">
+                    <img src="https://img.youtube.com/vi/s6cpSzRMfw8/hqdefault.jpg" alt="AI Ad 2" loading="lazy">
                     <div class="play-icon-center"><i class="fas fa-play-circle"></i></div>
                     <div class="poster-overlay">AI Ad II</div>
                 </div>
                 <div class="poster-card wide" data-video="XxHxFwlWGD8" data-title="AI Ad 3">
-                    <img src="https://img.youtube.com/vi/XxHxFwlWGD8/maxresdefault.jpg" alt="AI Ad 3" loading="lazy">
+                    <img src="https://img.youtube.com/vi/XxHxFwlWGD8/hqdefault.jpg" alt="AI Ad 3" loading="lazy">
                     <div class="play-icon-center"><i class="fas fa-play-circle"></i></div>
                     <div class="poster-overlay">AI Ad III</div>
                 </div>
                 <div class="poster-card wide" data-video="TnKSGkY5Hds" data-title="AI Ad 4">
-                    <img src="https://img.youtube.com/vi/TnKSGkY5Hds/maxresdefault.jpg" alt="AI Ad 4" loading="lazy">
+                    <img src="https://img.youtube.com/vi/TnKSGkY5Hds/hqdefault.jpg" alt="AI Ad 4" loading="lazy">
                     <div class="play-icon-center"><i class="fas fa-play-circle"></i></div>
                     <div class="poster-overlay">AI Ad IV</div>
                 </div>
             </div>
         </section>
 
-             <!-- SECTION 3: AI Photos & Cloning (reduced images) -->
         <section class="content-section fade-up-section" id="section-photos">
             <div class="section-header"><span class="red-accent"></span> AI Photos &amp; Cloning</div>
             <div class="category-row" data-row="photos">
                 <div class="poster-card tall" data-gallery="cloning" data-title="Photo Cloning">
-                    <img src="https://res.cloudinary.com/datfuxotx/image/upload/v1778666613/InCollage_20260513_121924997_tp86ie.jpg" alt="Photo Cloning" loading="lazy">
+                    <img src="https://res.cloudinary.com/datfuxotx/image/upload/q_auto,f_auto/v1778666613/InCollage_20260513_121924997_tp86ie.jpg" alt="Photo Cloning" loading="lazy">
                     <div class="poster-overlay">Photo Cloning</div>
                 </div>
                 <div class="poster-card tall" data-gallery="editing" data-title="AI Photo Editing">
-                    <img src="https://res.cloudinary.com/datfuxotx/image/upload/v1778666590/InCollage_20260513_124719161_ksw2kt.jpg" alt="AI Photo Editing" loading="lazy">
+                    <img src="https://res.cloudinary.com/datfuxotx/image/upload/q_auto,f_auto/v1778666590/InCollage_20260513_124719161_ksw2kt.jpg" alt="AI Photo Editing" loading="lazy">
                     <div class="poster-overlay">AI Photo Editing</div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 4: Graphics Design (logos 3, posters 2, branding 3) -->
         <section class="content-section fade-up-section" id="section-graphics">
             <div class="section-header"><span class="red-accent"></span> Graphics Design</div>
             <div class="category-row" data-row="graphics">
                 <div class="poster-card tall" data-gallery="logos" data-title="Logos">
-                    <img src="https://res.cloudinary.com/datfuxotx/image/upload/v1778656537/1778654790796_e6wgiy.jpg" alt="Logos" loading="lazy">
+                    <img src="https://res.cloudinary.com/datfuxotx/image/upload/q_auto,f_auto/v1778656537/1778654790796_e6wgiy.jpg" alt="Logos" loading="lazy">
                     <div class="poster-overlay">Logos</div>
                 </div>
                 <div class="poster-card tall" data-gallery="posters" data-title="Posters">
-                    <img src="https://res.cloudinary.com/datfuxotx/image/upload/v1778687890/3e207a10-4ebc-11f1-8671-0d0c60b1ec57_hosa8u.png" alt="Posters" loading="lazy">
+                    <img src="https://res.cloudinary.com/datfuxotx/image/upload/q_auto,f_auto/v1778687890/3e207a10-4ebc-11f1-8671-0d0c60b1ec57_hosa8u.png" alt="Posters" loading="lazy">
                     <div class="poster-overlay">Posters</div>
                 </div>
                 <div class="poster-card tall" data-gallery="branding" data-title="Branding">
-                    <img src="https://res.cloudinary.com/datfuxotx/image/upload/v1778688667/1778656761326_dlquo0.jpg" alt="Branding" loading="lazy">
+                    <img src="https://res.cloudinary.com/datfuxotx/image/upload/q_auto,f_auto/v1778688667/1778656761326_dlquo0.jpg" alt="Branding" loading="lazy">
                     <div class="poster-overlay">Branding</div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 5: Reinblacks Beats -->
         <section class="content-section fade-up-section" id="section-beats">
             <div class="section-header"><span class="red-accent"></span> Reinblacks Beats</div>
             <div class="beat-buttons">
@@ -626,7 +615,6 @@
             </div>
         </section>
 
-        <!-- CONTACT SECTION -->
         <section id="contact-section" class="fade-up-section">
             <div class="contact-split">
                 <div class="agent-card">
@@ -653,7 +641,6 @@
             </div>
         </section>
 
-        <!-- FIND US VIA & WHATSAPP -->
         <section class="content-section fade-up-section" id="find-us">
             <div class="section-header"><span class="red-accent"></span> Find us Via</div>
             <div class="social-links">
@@ -672,7 +659,6 @@
         </footer>
     </div>
 
-    <!-- MODALS -->
     <div class="modal-overlay" id="video-modal">
         <button class="modal-close" id="video-modal-close">✕</button>
         <div class="video-full-wrap" id="video-modal-content"></div>
@@ -689,35 +675,42 @@
     <button id="floating-chat-btn" title="Chat"><i class="fas fa-comment"></i></button>
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script src="//code.tidio.co/dmu9qvhzljut4stjuyoiwxqfjptj1nbj.js" async></script>
 
     <script>
         (function() {
-            // Reduced gallery images for performance
+            // Tidio loaded only after first scroll (delayed)
+            window.addEventListener('scroll', function loadTidio() {
+                var s = document.createElement('script');
+                s.src = '//code.tidio.co/dmu9qvhzljut4stjuyoiwxqfjptj1nbj.js';
+                s.async = true;
+                document.body.appendChild(s);
+                window.removeEventListener('scroll', loadTidio);
+            }, { once: true });
+
             const galleries = {
                 cloning: [
-                    'https://res.cloudinary.com/datfuxotx/image/upload/v1778666613/InCollage_20260513_121924997_tp86ie.jpg',
-                    'https://res.cloudinary.com/datfuxotx/image/upload/v1778666611/InCollage_20260513_125608805_wiv4cr.jpg',
-                    'https://res.cloudinary.com/datfuxotx/image/upload/v1778666655/InCollage_20260513_124510812_nlzdfz.jpg'
+                    'https://res.cloudinary.com/datfuxotx/image/upload/q_auto,f_auto/v1778666613/InCollage_20260513_121924997_tp86ie.jpg',
+                    'https://res.cloudinary.com/datfuxotx/image/upload/q_auto,f_auto/v1778666611/InCollage_20260513_125608805_wiv4cr.jpg',
+                    'https://res.cloudinary.com/datfuxotx/image/upload/q_auto,f_auto/v1778666655/InCollage_20260513_124510812_nlzdfz.jpg'
                 ],
                 editing: [
-                    'https://res.cloudinary.com/datfuxotx/image/upload/v1778666590/InCollage_20260513_124719161_ksw2kt.jpg',
-                    'https://res.cloudinary.com/datfuxotx/image/upload/v1778666587/InCollage_20260513_124952807_prs7y9.jpg',
-                    'https://res.cloudinary.com/datfuxotx/image/upload/v1778666586/InCollage_20260513_125310559_d2ncgy.jpg'
+                    'https://res.cloudinary.com/datfuxotx/image/upload/q_auto,f_auto/v1778666590/InCollage_20260513_124719161_ksw2kt.jpg',
+                    'https://res.cloudinary.com/datfuxotx/image/upload/q_auto,f_auto/v1778666587/InCollage_20260513_124952807_prs7y9.jpg',
+                    'https://res.cloudinary.com/datfuxotx/image/upload/q_auto,f_auto/v1778666586/InCollage_20260513_125310559_d2ncgy.jpg'
                 ],
                 logos: [
-                    'https://res.cloudinary.com/datfuxotx/image/upload/v1778656537/1778654790796_e6wgiy.jpg',
-                    'https://res.cloudinary.com/datfuxotx/image/upload/v1778656537/1778655130025_neq7gu.jpg',
-                    'https://res.cloudinary.com/datfuxotx/image/upload/v1778656537/1778654866874_yf3hme.jpg'
+                    'https://res.cloudinary.com/datfuxotx/image/upload/q_auto,f_auto/v1778656537/1778654790796_e6wgiy.jpg',
+                    'https://res.cloudinary.com/datfuxotx/image/upload/q_auto,f_auto/v1778656537/1778655130025_neq7gu.jpg',
+                    'https://res.cloudinary.com/datfuxotx/image/upload/q_auto,f_auto/v1778656537/1778654866874_yf3hme.jpg'
                 ],
                 posters: [
-                    'https://res.cloudinary.com/datfuxotx/image/upload/v1778687890/3e207a10-4ebc-11f1-8671-0d0c60b1ec57_hosa8u.png',
-                    'https://res.cloudinary.com/datfuxotx/image/upload/v1778687901/02f54ce0-4edf-11f1-b7e2-7d1a1e38f683_wkdbjm.png'
+                    'https://res.cloudinary.com/datfuxotx/image/upload/q_auto,f_auto/v1778687890/3e207a10-4ebc-11f1-8671-0d0c60b1ec57_hosa8u.png',
+                    'https://res.cloudinary.com/datfuxotx/image/upload/q_auto,f_auto/v1778687901/02f54ce0-4edf-11f1-b7e2-7d1a1e38f683_wkdbjm.png'
                 ],
                 branding: [
-                    'https://res.cloudinary.com/datfuxotx/image/upload/v1778688667/1778656761326_dlquo0.jpg',
-                    'https://res.cloudinary.com/datfuxotx/image/upload/v1778688668/1778657276427_iurlnd.jpg',
-                    'https://res.cloudinary.com/datfuxotx/image/upload/v1778688667/1778657145970_cvp8wc.jpg'
+                    'https://res.cloudinary.com/datfuxotx/image/upload/q_auto,f_auto/v1778688667/1778656761326_dlquo0.jpg',
+                    'https://res.cloudinary.com/datfuxotx/image/upload/q_auto,f_auto/v1778688668/1778657276427_iurlnd.jpg',
+                    'https://res.cloudinary.com/datfuxotx/image/upload/q_auto,f_auto/v1778688667/1778657145970_cvp8wc.jpg'
                 ]
             };
 
@@ -730,6 +723,7 @@
             }
             setTimeout(completeIntro, 2600);
             introOverlay.addEventListener('click', completeIntro);
+
             const topNav = document.getElementById('top-nav');
             const categoryBar = document.getElementById('category-bar');
             const hamburgerBtn = document.getElementById('hamburger-btn');
@@ -755,7 +749,7 @@
             const allCatBtns = document.querySelectorAll('.cat-btn');
             const allHamburgerLinks = document.querySelectorAll('#hamburger-panel a');
 
-            function openHamburger() {
+         function openHamburger() {
                 hamburgerOverlay.classList.add('active');
                 hamburgerPanel.classList.add('active');
                 document.body.style.overflow = 'hidden';
@@ -794,7 +788,6 @@
             function onPageScroll() {
                 const y = window.scrollY;
                 topNav.classList.toggle('scrolled', y > 40);
-                categoryBar.classList.toggle('scrolled', y > 40);
                 updateActiveNavLink();
             }
             window.addEventListener('scroll', onPageScroll, { passive: true });
@@ -959,7 +952,7 @@
                 });
             });
 
-                        document.addEventListener('keydown', function(e) {
+            document.addEventListener('keydown', function(e) {
                 if (e.key === 'Escape') {
                     if (imageFullscreen.classList.contains('active')) closeImageFullscreen();
                     else if (galleryModal.classList.contains('active')) closeGalleryModal();
@@ -980,4 +973,3 @@
     </script>
 </body>
 </html>
-            
